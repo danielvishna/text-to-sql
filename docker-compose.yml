@@ -1,0 +1,45 @@
+services:
+  mssql:
+    build: ./db
+    container_name: mssql_restore
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=StrongPassword123!
+    ports:
+      - "1433:1433"
+    volumes:
+      - ./db/restore-script.sql:/restore-script.sql
+    command: >
+      bash -c "
+        /opt/mssql/bin/sqlservr & 
+        echo 'Waiting for SQL Server to start...';
+        for i in {1..30}; do
+          /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P \"$${SA_PASSWORD}\" -Q 'SELECT 1' && break;
+          echo 'SQL Server not ready yet...'; sleep 2;
+        done;
+        /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P \"$${SA_PASSWORD}\" -i restore-script.sql;
+        wait
+      "
+  backend:
+    build: ./backend
+    container_name: backend
+    ports:
+      - "8000:8000"
+    depends_on:
+      - mssql
+    environment:
+      - DB_SERVER=host.docker.internal
+      - DB_USER=sa
+      - DB_PASSWORD=StrongPassword123!
+      - DB_NAME=AdventureWorks2022
+      - API_HOST=0.0.0.0
+      - API_PORT=8000
+  frontend:
+    build: ./frontend
+    container_name: frontend
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    environment:
+      - REACT_APP_API_URL=http://backend:5000/api

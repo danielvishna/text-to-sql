@@ -1,0 +1,18 @@
+[
+  {
+    "timestamp": "2025-05-06 18:05:13",
+    "question": "Average Order Quantity by Product Category",
+    "sql": "SELECT \n    pc.Name AS CategoryName,\n    AVG(sod.OrderQty) AS AverageOrderQuantity\nFROM \n    Production.ProductCategory pc\n    JOIN Production.ProductSubcategory psc ON pc.ProductCategoryID = psc.ProductCategoryID\n    JOIN Production.Product p ON psc.ProductSubcategoryID = p.ProductSubcategoryID\n    JOIN Sales.SalesOrderDetail sod ON p.ProductID = sod.ProductID\nGROUP BY \n    pc.Name\nORDER BY \n    pc.Name;",
+    "is_correct": true,
+    "corrected_sql": null,
+    "additional_feedback": ""
+  },
+  {
+    "timestamp": "2025-05-06 18:47:27",
+    "question": "List Employees Hired in the Last 12 Years",
+    "sql": "SELECT \n    e.BusinessEntityID,\n    p.FirstName,\n    p.LastName,\n    e.HireDate\nFROM \n    HumanResources.Employee e\n    JOIN Person.Person p ON e.BusinessEntityID = p.BusinessEntityID\nWHERE \n    e.HireDate >= DATEADD(YEAR, -12, GETDATE())\nORDER BY \n    e.HireDate DESC;",
+    "is_correct": true,
+    "corrected_sql": null,
+    "additional_feedback": ""
+  }
+]

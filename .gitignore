@@ -1,0 +1,10 @@
+# Virtual environment folders
+venv/
+.env/
+*.pyc
+__pycache__/
+# Node.js dependencies
+node_modules/
+npm-debug.log
+package-lock.json
+RunProject/restore/AdventureWorks2022.bak

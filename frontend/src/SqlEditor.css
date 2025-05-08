@@ -1,0 +1,129 @@
+/* SqlEditor.css - Add this as a new file in your frontend/src directory */
+
+.sql-editor-container {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 15px;
+  margin: 20px 0;
+  border: 1px solid #e9ecef;
+}
+
+.sql-editor-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.sql-editor-header h3 {
+  margin: 0;
+  color: #343a40;
+  font-size: 1.1rem;
+}
+
+.sql-editor-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.edit-button,
+.execute-button,
+.cancel-button {
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  border: 1px solid;
+  transition: all 0.2s;
+}
+
+.edit-button {
+  background-color: #f8f9fa;
+  border-color: #6c757d;
+  color: #6c757d;
+}
+
+.edit-button:hover {
+  background-color: #e9ecef;
+}
+
+.execute-button {
+  background-color: #007bff;
+  border-color: #007bff;
+  color: white;
+}
+
+.execute-button:hover {
+  background-color: #0069d9;
+}
+
+.execute-button:disabled {
+  background-color: #6c757d;
+  border-color: #6c757d;
+  cursor: not-allowed;
+}
+
+.cancel-button {
+  background-color: #f8f9fa;
+  border-color: #dc3545;
+  color: #dc3545;
+}
+
+.cancel-button:hover {
+  background-color: #f8d7da;
+}
+
+.sql-textarea {
+  width: 100%;
+  font-family: "Courier New", monospace;
+  font-size: 14px;
+  padding: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  background-color: #fff;
+  resize: vertical;
+}
+
+.sql-code {
+  margin: 0 !important;
+  border-radius: 4px !important;
+}
+
+.editor-footer {
+  margin-top: 10px;
+  font-size: 0.85rem;
+}
+
+.editor-info {
+  color: #6c757d;
+  margin: 0;
+}
+
+.validation-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.badge {
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.badge.success {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.badge.error {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.badge.warning {
+  background-color: #fff3cd;
+  color: #856404;
+}

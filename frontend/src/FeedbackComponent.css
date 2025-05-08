@@ -1,0 +1,106 @@
+/* FeedbackComponent.css - Add this as a new file in your frontend/src directory */
+
+.feedback-container {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px 0;
+  border: 1px solid #e9ecef;
+}
+
+.feedback-container h4 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: #343a40;
+  font-size: 1.1rem;
+}
+
+.feedback-buttons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.feedback-button {
+  padding: 8px 16px;
+  border: 1px solid #ced4da;
+  background-color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+
+.feedback-button:hover {
+  background-color: #e9ecef;
+}
+
+.feedback-button.selected {
+  background-color: #28a745;
+  color: white;
+  border-color: #28a745;
+}
+
+.feedback-button.negative.selected {
+  background-color: #dc3545;
+  border-color: #dc3545;
+}
+
+.feedback-form {
+  border-top: 1px solid #e9ecef;
+  padding-top: 15px;
+}
+
+.feedback-field {
+  margin-bottom: 15px;
+}
+
+.feedback-field label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.feedback-field textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 0.9rem;
+  resize: vertical;
+}
+
+.feedback-submit {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.2s;
+}
+
+.feedback-submit:hover {
+  background-color: #0069d9;
+}
+
+.feedback-message {
+  background-color: #d4edda;
+  color: #155724;
+  padding: 15px;
+  border-radius: 4px;
+  margin: 20px 0;
+}
+
+.feedback-message h4 {
+  margin-top: 0;
+  margin-bottom: 5px;
+  font-size: 1.1rem;
+}
+
+.feedback-message p {
+  margin: 0;
+}

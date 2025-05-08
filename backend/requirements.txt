@@ -1,0 +1,11 @@
+fastapi==0.103.1
+uvicorn==0.23.2
+pydantic==2.3.0
+pyodbc==4.0.39
+python-dotenv==1.0.0
+openai==0.28.1
+langchain==0.0.304
+sqlalchemy==2.0.21
+numpy==1.25.2
+pandas==2.1.1
+sqlparse==0.5.3

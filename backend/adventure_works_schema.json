@@ -1,0 +1,824 @@
+{
+  "tables": [],
+  "relationships": [
+    {
+      "fk_name": "FK_Employee_Person_BusinessEntityID",
+      "parent_schema": "HumanResources",
+      "parent_table": "Employee",
+      "parent_column": "BusinessEntityID",
+      "referenced_schema": "Person",
+      "referenced_table": "Person",
+      "referenced_column": "BusinessEntityID"
+    },
+    {
+      "fk_name": "FK_EmployeeDepartmentHistory_Department_DepartmentID",
+      "parent_schema": "HumanResources",
+      "parent_table": "EmployeeDepartmentHistory",
+      "parent_column": "DepartmentID",
+      "referenced_schema": "HumanResources",
+      "referenced_table": "Department",
+      "referenced_column": "DepartmentID"
+    },
+    {
+      "fk_name": "FK_EmployeeDepartmentHistory_Employee_BusinessEntityID",
+      "parent_schema": "HumanResources",
+      "parent_table": "EmployeeDepartmentHistory",
+      "parent_column": "BusinessEntityID",
+      "referenced_schema": "HumanResources",
+      "referenced_table": "Employee",
+      "referenced_column": "BusinessEntityID"
+    },
+    {
+      "fk_name": "FK_EmployeeDepartmentHistory_Shift_ShiftID",
+      "parent_schema": "HumanResources",
+      "parent_table": "EmployeeDepartmentHistory",
+      "parent_column": "ShiftID",
+      "referenced_schema": "HumanResources",
+      "referenced_table": "Shift",
+      "referenced_column": "ShiftID"
+    },
+    {
+      "fk_name": "FK_EmployeePayHistory_Employee_BusinessEntityID",
+      "parent_schema": "HumanResources",
+      "parent_table": "EmployeePayHistory",
+      "parent_column": "BusinessEntityID",
+      "referenced_schema": "HumanResources",
+      "referenced_table": "Employee",
+      "referenced_column": "BusinessEntityID"
+    },
+    {
+      "fk_name": "FK_JobCandidate_Employee_BusinessEntityID",
+      "parent_schema": "HumanResources",
+      "parent_table": "JobCandidate",
+      "parent_column": "BusinessEntityID",
+      "referenced_schema": "HumanResources",
+      "referenced_table": "Employee",
+      "referenced_column": "BusinessEntityID"
+    },
+    {
+      "fk_name": "FK_Address_StateProvince_StateProvinceID",
+      "parent_schema": "Person",
+      "parent_table": "Address",
+      "parent_column": "StateProvinceID",
+      "referenced_schema": "Person",
+      "referenced_table": "StateProvince",
+      "referenced_column": "StateProvinceID"
+    },
+    {
+      "fk_name": "FK_BusinessEntityAddress_Address_AddressID",
+      "parent_schema": "Person",
+      "parent_table": "BusinessEntityAddress",
+      "parent_column": "AddressID",
+      "referenced_schema": "Person",
+      "referenced_table": "Address",
+      "referenced_column": "AddressID"
+    },
+    {
+      "fk_name": "FK_BusinessEntityAddress_AddressType_AddressTypeID",
+      "parent_schema": "Person",
+      "parent_table": "BusinessEntityAddress",
+      "parent_column": "AddressTypeID",
+      "referenced_schema": "Person",
+      "referenced_table": "AddressType",
+      "referenced_column": "AddressTypeID"
+    },
+    {
+      "fk_name": "FK_BusinessEntityAddress_BusinessEntity_BusinessEntityID",
+      "parent_schema": "Person",
+      "parent_table": "BusinessEntityAddress",
+      "parent_column": "BusinessEntityID",
+      "referenced_schema": "Person",
+      "referenced_table": "BusinessEntity",
+      "referenced_column": "BusinessEntityID"
+    },
+    {
+      "fk_name": "FK_BusinessEntityContact_BusinessEntity_BusinessEntityID",
+      "parent_schema": "Person",
+      "parent_table": "BusinessEntityContact",
+      "parent_column": "BusinessEntityID",
+      "referenced_schema": "Person",
+      "referenced_table": "BusinessEntity",
+      "referenced_column": "BusinessEntityID"
+    },
+    {
+      "fk_name": "FK_BusinessEntityContact_ContactType_ContactTypeID",
+      "parent_schema": "Person",
+      "parent_table": "BusinessEntityContact",
+      "parent_column": "ContactTypeID",
+      "referenced_schema": "Person",
+      "referenced_table": "ContactType",
+      "referenced_column": "ContactTypeID"
+    },
+    {
+      "fk_name": "FK_BusinessEntityContact_Person_PersonID",
+      "parent_schema": "Person",
+      "parent_table": "BusinessEntityContact",
+      "parent_column": "PersonID",
+      "referenced_schema": "Person",
+      "referenced_table": "Person",
+      "referenced_column": "BusinessEntityID"
+    },
+    {
+      "fk_name": "FK_EmailAddress_Person_BusinessEntityID",
+      "parent_schema": "Person",
+      "parent_table": "EmailAddress",
+      "parent_column": "BusinessEntityID",
+      "referenced_schema": "Person",
+      "referenced_table": "Person",
+      "referenced_column": "BusinessEntityID"
+    },
+    {
+      "fk_name": "FK_Password_Person_BusinessEntityID",
+      "parent_schema": "Person",
+      "parent_table": "Password",
+      "parent_column": "BusinessEntityID",
+      "referenced_schema": "Person",
+      "referenced_table": "Person",
+      "referenced_column": "BusinessEntityID"
+    },
+    {
+      "fk_name": "FK_Person_BusinessEntity_BusinessEntityID",
+      "parent_schema": "Person",
+      "parent_table": "Person",
+      "parent_column": "BusinessEntityID",
+      "referenced_schema": "Person",
+      "referenced_table": "BusinessEntity",
+      "referenced_column": "BusinessEntityID"
+    },
+    {
+      "fk_name": "FK_PersonPhone_Person_BusinessEntityID",
+      "parent_schema": "Person",
+      "parent_table": "PersonPhone",
+      "parent_column": "BusinessEntityID",
+      "referenced_schema": "Person",
+      "referenced_table": "Person",
+      "referenced_column": "BusinessEntityID"
+    },
+    {
+      "fk_name": "FK_PersonPhone_PhoneNumberType_PhoneNumberTypeID",
+      "parent_schema": "Person",
+      "parent_table": "PersonPhone",
+      "parent_column": "PhoneNumberTypeID",
+      "referenced_schema": "Person",
+      "referenced_table": "PhoneNumberType",
+      "referenced_column": "PhoneNumberTypeID"
+    },
+    {
+      "fk_name": "FK_StateProvince_CountryRegion_CountryRegionCode",
+      "parent_schema": "Person",
+      "parent_table": "StateProvince",
+      "parent_column": "CountryRegionCode",
+      "referenced_schema": "Person",
+      "referenced_table": "CountryRegion",
+      "referenced_column": "CountryRegionCode"
+    },
+    {
+      "fk_name": "FK_StateProvince_SalesTerritory_TerritoryID",
+      "parent_schema": "Person",
+      "parent_table": "StateProvince",
+      "parent_column": "TerritoryID",
+      "referenced_schema": "Sales",
+      "referenced_table": "SalesTerritory",
+      "referenced_column": "TerritoryID"
+    },
+    {
+      "fk_name": "FK_BillOfMaterials_Product_ComponentID",
+      "parent_schema": "Production",
+      "parent_table": "BillOfMaterials",
+      "parent_column": "ComponentID",
+      "referenced_schema": "Production",
+      "referenced_table": "Product",
+      "referenced_column": "ProductID"
+    },
+    {
+      "fk_name": "FK_BillOfMaterials_Product_ProductAssemblyID",
+      "parent_schema": "Production",
+      "parent_table": "BillOfMaterials",
+      "parent_column": "ProductAssemblyID",
+      "referenced_schema": "Production",
+      "referenced_table": "Product",
+      "referenced_column": "ProductID"
+    },
+    {
+      "fk_name": "FK_BillOfMaterials_UnitMeasure_UnitMeasureCode",
+      "parent_schema": "Production",
+      "parent_table": "BillOfMaterials",
+      "parent_column": "UnitMeasureCode",
+      "referenced_schema": "Production",
+      "referenced_table": "UnitMeasure",
+      "referenced_column": "UnitMeasureCode"
+    },
+    {
+      "fk_name": "FK_Document_Employee_Owner",
+      "parent_schema": "Production",
+      "parent_table": "Document",
+      "parent_column": "Owner",
+      "referenced_schema": "HumanResources",
+      "referenced_table": "Employee",
+      "referenced_column": "BusinessEntityID"
+    },
+    {
+      "fk_name": "FK_Product_ProductModel_ProductModelID",
+      "parent_schema": "Production",
+      "parent_table": "Product",
+      "parent_column": "ProductModelID",
+      "referenced_schema": "Production",
+      "referenced_table": "ProductModel",
+      "referenced_column": "ProductModelID"
+    },
+    {
+      "fk_name": "FK_Product_ProductSubcategory_ProductSubcategoryID",
+      "parent_schema": "Production",
+      "parent_table": "Product",
+      "parent_column": "ProductSubcategoryID",
+      "referenced_schema": "Production",
+      "referenced_table": "ProductSubcategory",
+      "referenced_column": "ProductSubcategoryID"
+    },
+    {
+      "fk_name": "FK_Product_UnitMeasure_SizeUnitMeasureCode",
+      "parent_schema": "Production",
+      "parent_table": "Product",
+      "parent_column": "SizeUnitMeasureCode",
+      "referenced_schema": "Production",
+      "referenced_table": "UnitMeasure",
+      "referenced_column": "UnitMeasureCode"
+    },
+    {
+      "fk_name": "FK_Product_UnitMeasure_WeightUnitMeasureCode",
+      "parent_schema": "Production",
+      "parent_table": "Product",
+      "parent_column": "WeightUnitMeasureCode",
+      "referenced_schema": "Production",
+      "referenced_table": "UnitMeasure",
+      "referenced_column": "UnitMeasureCode"
+    },
+    {
+      "fk_name": "FK_ProductCostHistory_Product_ProductID",
+      "parent_schema": "Production",
+      "parent_table": "ProductCostHistory",
+      "parent_column": "ProductID",
+      "referenced_schema": "Production",
+      "referenced_table": "Product",
+      "referenced_column": "ProductID"
+    },
+    {
+      "fk_name": "FK_ProductDocument_Document_DocumentNode",
+      "parent_schema": "Production",
+      "parent_table": "ProductDocument",
+      "parent_column": "DocumentNode",
+      "referenced_schema": "Production",
+      "referenced_table": "Document",
+      "referenced_column": "DocumentNode"
+    },
+    {
+      "fk_name": "FK_ProductDocument_Product_ProductID",
+      "parent_schema": "Production",
+      "parent_table": "ProductDocument",
+      "parent_column": "ProductID",
+      "referenced_schema": "Production",
+      "referenced_table": "Product",
+      "referenced_column": "ProductID"
+    },
+    {
+      "fk_name": "FK_ProductInventory_Location_LocationID",
+      "parent_schema": "Production",
+      "parent_table": "ProductInventory",
+      "parent_column": "LocationID",
+      "referenced_schema": "Production",
+      "referenced_table": "Location",
+      "referenced_column": "LocationID"
+    },
+    {
+      "fk_name": "FK_ProductInventory_Product_ProductID",
+      "parent_schema": "Production",
+      "parent_table": "ProductInventory",
+      "parent_column": "ProductID",
+      "referenced_schema": "Production",
+      "referenced_table": "Product",
+      "referenced_column": "ProductID"
+    },
+    {
+      "fk_name": "FK_ProductListPriceHistory_Product_ProductID",
+      "parent_schema": "Production",
+      "parent_table": "ProductListPriceHistory",
+      "parent_column": "ProductID",
+      "referenced_schema": "Production",
+      "referenced_table": "Product",
+      "referenced_column": "ProductID"
+    },
+    {
+      "fk_name": "FK_ProductModelIllustration_Illustration_IllustrationID",
+      "parent_schema": "Production",
+      "parent_table": "ProductModelIllustration",
+      "parent_column": "IllustrationID",
+      "referenced_schema": "Production",
+      "referenced_table": "Illustration",
+      "referenced_column": "IllustrationID"
+    },
+    {
+      "fk_name": "FK_ProductModelIllustration_ProductModel_ProductModelID",
+      "parent_schema": "Production",
+      "parent_table": "ProductModelIllustration",
+      "parent_column": "ProductModelID",
+      "referenced_schema": "Production",
+      "referenced_table": "ProductModel",
+      "referenced_column": "ProductModelID"
+    },
+    {
+      "fk_name": "FK_ProductModelProductDescriptionCulture_Culture_CultureID",
+      "parent_schema": "Production",
+      "parent_table": "ProductModelProductDescriptionCulture",
+      "parent_column": "CultureID",
+      "referenced_schema": "Production",
+      "referenced_table": "Culture",
+      "referenced_column": "CultureID"
+    },
+    {
+      "fk_name": "FK_ProductModelProductDescriptionCulture_ProductDescription_ProductDescriptionID",
+      "parent_schema": "Production",
+      "parent_table": "ProductModelProductDescriptionCulture",
+      "parent_column": "ProductDescriptionID",
+      "referenced_schema": "Production",
+      "referenced_table": "ProductDescription",
+      "referenced_column": "ProductDescriptionID"
+    },
+    {
+      "fk_name": "FK_ProductModelProductDescriptionCulture_ProductModel_ProductModelID",
+      "parent_schema": "Production",
+      "parent_table": "ProductModelProductDescriptionCulture",
+      "parent_column": "ProductModelID",
+      "referenced_schema": "Production",
+      "referenced_table": "ProductModel",
+      "referenced_column": "ProductModelID"
+    },
+    {
+      "fk_name": "FK_ProductProductPhoto_Product_ProductID",
+      "parent_schema": "Production",
+      "parent_table": "ProductProductPhoto",
+      "parent_column": "ProductID",
+      "referenced_schema": "Production",
+      "referenced_table": "Product",
+      "referenced_column": "ProductID"
+    },
+    {
+      "fk_name": "FK_ProductProductPhoto_ProductPhoto_ProductPhotoID",
+      "parent_schema": "Production",
+      "parent_table": "ProductProductPhoto",
+      "parent_column": "ProductPhotoID",
+      "referenced_schema": "Production",
+      "referenced_table": "ProductPhoto",
+      "referenced_column": "ProductPhotoID"
+    },
+    {
+      "fk_name": "FK_ProductReview_Product_ProductID",
+      "parent_schema": "Production",
+      "parent_table": "ProductReview",
+      "parent_column": "ProductID",
+      "referenced_schema": "Production",
+      "referenced_table": "Product",
+      "referenced_column": "ProductID"
+    },
+    {
+      "fk_name": "FK_ProductSubcategory_ProductCategory_ProductCategoryID",
+      "parent_schema": "Production",
+      "parent_table": "ProductSubcategory",
+      "parent_column": "ProductCategoryID",
+      "referenced_schema": "Production",
+      "referenced_table": "ProductCategory",
+      "referenced_column": "ProductCategoryID"
+    },
+    {
+      "fk_name": "FK_TransactionHistory_Product_ProductID",
+      "parent_schema": "Production",
+      "parent_table": "TransactionHistory",
+      "parent_column": "ProductID",
+      "referenced_schema": "Production",
+      "referenced_table": "Product",
+      "referenced_column": "ProductID"
+    },
+    {
+      "fk_name": "FK_WorkOrder_Product_ProductID",
+      "parent_schema": "Production",
+      "parent_table": "WorkOrder",
+      "parent_column": "ProductID",
+      "referenced_schema": "Production",
+      "referenced_table": "Product",
+      "referenced_column": "ProductID"
+    },
+    {
+      "fk_name": "FK_WorkOrder_ScrapReason_ScrapReasonID",
+      "parent_schema": "Production",
+      "parent_table": "WorkOrder",
+      "parent_column": "ScrapReasonID",
+      "referenced_schema": "Production",
+      "referenced_table": "ScrapReason",
+      "referenced_column": "ScrapReasonID"
+    },
+    {
+      "fk_name": "FK_WorkOrderRouting_Location_LocationID",
+      "parent_schema": "Production",
+      "parent_table": "WorkOrderRouting",
+      "parent_column": "LocationID",
+      "referenced_schema": "Production",
+      "referenced_table": "Location",
+      "referenced_column": "LocationID"
+    },
+    {
+      "fk_name": "FK_WorkOrderRouting_WorkOrder_WorkOrderID",
+      "parent_schema": "Production",
+      "parent_table": "WorkOrderRouting",
+      "parent_column": "WorkOrderID",
+      "referenced_schema": "Production",
+      "referenced_table": "WorkOrder",
+      "referenced_column": "WorkOrderID"
+    },
+    {
+      "fk_name": "FK_ProductVendor_Product_ProductID",
+      "parent_schema": "Purchasing",
+      "parent_table": "ProductVendor",
+      "parent_column": "ProductID",
+      "referenced_schema": "Production",
+      "referenced_table": "Product",
+      "referenced_column": "ProductID"
+    },
+    {
+      "fk_name": "FK_ProductVendor_UnitMeasure_UnitMeasureCode",
+      "parent_schema": "Purchasing",
+      "parent_table": "ProductVendor",
+      "parent_column": "UnitMeasureCode",
+      "referenced_schema": "Production",
+      "referenced_table": "UnitMeasure",
+      "referenced_column": "UnitMeasureCode"
+    },
+    {
+      "fk_name": "FK_ProductVendor_Vendor_BusinessEntityID",
+      "parent_schema": "Purchasing",
+      "parent_table": "ProductVendor",
+      "parent_column": "BusinessEntityID",
+      "referenced_schema": "Purchasing",
+      "referenced_table": "Vendor",
+      "referenced_column": "BusinessEntityID"
+    },
+    {
+      "fk_name": "FK_PurchaseOrderDetail_Product_ProductID",
+      "parent_schema": "Purchasing",
+      "parent_table": "PurchaseOrderDetail",
+      "parent_column": "ProductID",
+      "referenced_schema": "Production",
+      "referenced_table": "Product",
+      "referenced_column": "ProductID"
+    },
+    {
+      "fk_name": "FK_PurchaseOrderDetail_PurchaseOrderHeader_PurchaseOrderID",
+      "parent_schema": "Purchasing",
+      "parent_table": "PurchaseOrderDetail",
+      "parent_column": "PurchaseOrderID",
+      "referenced_schema": "Purchasing",
+      "referenced_table": "PurchaseOrderHeader",
+      "referenced_column": "PurchaseOrderID"
+    },
+    {
+      "fk_name": "FK_PurchaseOrderHeader_Employee_EmployeeID",
+      "parent_schema": "Purchasing",
+      "parent_table": "PurchaseOrderHeader",
+      "parent_column": "EmployeeID",
+      "referenced_schema": "HumanResources",
+      "referenced_table": "Employee",
+      "referenced_column": "BusinessEntityID"
+    },
+    {
+      "fk_name": "FK_PurchaseOrderHeader_ShipMethod_ShipMethodID",
+      "parent_schema": "Purchasing",
+      "parent_table": "PurchaseOrderHeader",
+      "parent_column": "ShipMethodID",
+      "referenced_schema": "Purchasing",
+      "referenced_table": "ShipMethod",
+      "referenced_column": "ShipMethodID"
+    },
+    {
+      "fk_name": "FK_PurchaseOrderHeader_Vendor_VendorID",
+      "parent_schema": "Purchasing",
+      "parent_table": "PurchaseOrderHeader",
+      "parent_column": "VendorID",
+      "referenced_schema": "Purchasing",
+      "referenced_table": "Vendor",
+      "referenced_column": "BusinessEntityID"
+    },
+    {
+      "fk_name": "FK_Vendor_BusinessEntity_BusinessEntityID",
+      "parent_schema": "Purchasing",
+      "parent_table": "Vendor",
+      "parent_column": "BusinessEntityID",
+      "referenced_schema": "Person",
+      "referenced_table": "BusinessEntity",
+      "referenced_column": "BusinessEntityID"
+    },
+    {
+      "fk_name": "FK_CountryRegionCurrency_CountryRegion_CountryRegionCode",
+      "parent_schema": "Sales",
+      "parent_table": "CountryRegionCurrency",
+      "parent_column": "CountryRegionCode",
+      "referenced_schema": "Person",
+      "referenced_table": "CountryRegion",
+      "referenced_column": "CountryRegionCode"
+    },
+    {
+      "fk_name": "FK_CountryRegionCurrency_Currency_CurrencyCode",
+      "parent_schema": "Sales",
+      "parent_table": "CountryRegionCurrency",
+      "parent_column": "CurrencyCode",
+      "referenced_schema": "Sales",
+      "referenced_table": "Currency",
+      "referenced_column": "CurrencyCode"
+    },
+    {
+      "fk_name": "FK_CurrencyRate_Currency_FromCurrencyCode",
+      "parent_schema": "Sales",
+      "parent_table": "CurrencyRate",
+      "parent_column": "FromCurrencyCode",
+      "referenced_schema": "Sales",
+      "referenced_table": "Currency",
+      "referenced_column": "CurrencyCode"
+    },
+    {
+      "fk_name": "FK_CurrencyRate_Currency_ToCurrencyCode",
+      "parent_schema": "Sales",
+      "parent_table": "CurrencyRate",
+      "parent_column": "ToCurrencyCode",
+      "referenced_schema": "Sales",
+      "referenced_table": "Currency",
+      "referenced_column": "CurrencyCode"
+    },
+    {
+      "fk_name": "FK_Customer_Person_PersonID",
+      "parent_schema": "Sales",
+      "parent_table": "Customer",
+      "parent_column": "PersonID",
+      "referenced_schema": "Person",
+      "referenced_table": "Person",
+      "referenced_column": "BusinessEntityID"
+    },
+    {
+      "fk_name": "FK_Customer_SalesTerritory_TerritoryID",
+      "parent_schema": "Sales",
+      "parent_table": "Customer",
+      "parent_column": "TerritoryID",
+      "referenced_schema": "Sales",
+      "referenced_table": "SalesTerritory",
+      "referenced_column": "TerritoryID"
+    },
+    {
+      "fk_name": "FK_Customer_Store_StoreID",
+      "parent_schema": "Sales",
+      "parent_table": "Customer",
+      "parent_column": "StoreID",
+      "referenced_schema": "Sales",
+      "referenced_table": "Store",
+      "referenced_column": "BusinessEntityID"
+    },
+    {
+      "fk_name": "FK_PersonCreditCard_CreditCard_CreditCardID",
+      "parent_schema": "Sales",
+      "parent_table": "PersonCreditCard",
+      "parent_column": "CreditCardID",
+      "referenced_schema": "Sales",
+      "referenced_table": "CreditCard",
+      "referenced_column": "CreditCardID"
+    },
+    {
+      "fk_name": "FK_PersonCreditCard_Person_BusinessEntityID",
+      "parent_schema": "Sales",
+      "parent_table": "PersonCreditCard",
+      "parent_column": "BusinessEntityID",
+      "referenced_schema": "Person",
+      "referenced_table": "Person",
+      "referenced_column": "BusinessEntityID"
+    },
+    {
+      "fk_name": "FK_SalesOrderDetail_SalesOrderHeader_SalesOrderID",
+      "parent_schema": "Sales",
+      "parent_table": "SalesOrderDetail",
+      "parent_column": "SalesOrderID",
+      "referenced_schema": "Sales",
+      "referenced_table": "SalesOrderHeader",
+      "referenced_column": "SalesOrderID"
+    },
+    {
+      "fk_name": "FK_SalesOrderDetail_SpecialOfferProduct_SpecialOfferIDProductID",
+      "parent_schema": "Sales",
+      "parent_table": "SalesOrderDetail",
+      "parent_column": "ProductID",
+      "referenced_schema": "Sales",
+      "referenced_table": "SpecialOfferProduct",
+      "referenced_column": "ProductID"
+    },
+    {
+      "fk_name": "FK_SalesOrderDetail_SpecialOfferProduct_SpecialOfferIDProductID",
+      "parent_schema": "Sales",
+      "parent_table": "SalesOrderDetail",
+      "parent_column": "SpecialOfferID",
+      "referenced_schema": "Sales",
+      "referenced_table": "SpecialOfferProduct",
+      "referenced_column": "SpecialOfferID"
+    },
+    {
+      "fk_name": "FK_SalesOrderHeader_Address_BillToAddressID",
+      "parent_schema": "Sales",
+      "parent_table": "SalesOrderHeader",
+      "parent_column": "BillToAddressID",
+      "referenced_schema": "Person",
+      "referenced_table": "Address",
+      "referenced_column": "AddressID"
+    },
+    {
+      "fk_name": "FK_SalesOrderHeader_Address_ShipToAddressID",
+      "parent_schema": "Sales",
+      "parent_table": "SalesOrderHeader",
+      "parent_column": "ShipToAddressID",
+      "referenced_schema": "Person",
+      "referenced_table": "Address",
+      "referenced_column": "AddressID"
+    },
+    {
+      "fk_name": "FK_SalesOrderHeader_CreditCard_CreditCardID",
+      "parent_schema": "Sales",
+      "parent_table": "SalesOrderHeader",
+      "parent_column": "CreditCardID",
+      "referenced_schema": "Sales",
+      "referenced_table": "CreditCard",
+      "referenced_column": "CreditCardID"
+    },
+    {
+      "fk_name": "FK_SalesOrderHeader_CurrencyRate_CurrencyRateID",
+      "parent_schema": "Sales",
+      "parent_table": "SalesOrderHeader",
+      "parent_column": "CurrencyRateID",
+      "referenced_schema": "Sales",
+      "referenced_table": "CurrencyRate",
+      "referenced_column": "CurrencyRateID"
+    },
+    {
+      "fk_name": "FK_SalesOrderHeader_Customer_CustomerID",
+      "parent_schema": "Sales",
+      "parent_table": "SalesOrderHeader",
+      "parent_column": "CustomerID",
+      "referenced_schema": "Sales",
+      "referenced_table": "Customer",
+      "referenced_column": "CustomerID"
+    },
+    {
+      "fk_name": "FK_SalesOrderHeader_SalesPerson_SalesPersonID",
+      "parent_schema": "Sales",
+      "parent_table": "SalesOrderHeader",
+      "parent_column": "SalesPersonID",
+      "referenced_schema": "Sales",
+      "referenced_table": "SalesPerson",
+      "referenced_column": "BusinessEntityID"
+    },
+    {
+      "fk_name": "FK_SalesOrderHeader_SalesTerritory_TerritoryID",
+      "parent_schema": "Sales",
+      "parent_table": "SalesOrderHeader",
+      "parent_column": "TerritoryID",
+      "referenced_schema": "Sales",
+      "referenced_table": "SalesTerritory",
+      "referenced_column": "TerritoryID"
+    },
+    {
+      "fk_name": "FK_SalesOrderHeader_ShipMethod_ShipMethodID",
+      "parent_schema": "Sales",
+      "parent_table": "SalesOrderHeader",
+      "parent_column": "ShipMethodID",
+      "referenced_schema": "Purchasing",
+      "referenced_table": "ShipMethod",
+      "referenced_column": "ShipMethodID"
+    },
+    {
+      "fk_name": "FK_SalesOrderHeaderSalesReason_SalesOrderHeader_SalesOrderID",
+      "parent_schema": "Sales",
+      "parent_table": "SalesOrderHeaderSalesReason",
+      "parent_column": "SalesOrderID",
+      "referenced_schema": "Sales",
+      "referenced_table": "SalesOrderHeader",
+      "referenced_column": "SalesOrderID"
+    },
+    {
+      "fk_name": "FK_SalesOrderHeaderSalesReason_SalesReason_SalesReasonID",
+      "parent_schema": "Sales",
+      "parent_table": "SalesOrderHeaderSalesReason",
+      "parent_column": "SalesReasonID",
+      "referenced_schema": "Sales",
+      "referenced_table": "SalesReason",
+      "referenced_column": "SalesReasonID"
+    },
+    {
+      "fk_name": "FK_SalesPerson_Employee_BusinessEntityID",
+      "parent_schema": "Sales",
+      "parent_table": "SalesPerson",
+      "parent_column": "BusinessEntityID",
+      "referenced_schema": "HumanResources",
+      "referenced_table": "Employee",
+      "referenced_column": "BusinessEntityID"
+    },
+    {
+      "fk_name": "FK_SalesPerson_SalesTerritory_TerritoryID",
+      "parent_schema": "Sales",
+      "parent_table": "SalesPerson",
+      "parent_column": "TerritoryID",
+      "referenced_schema": "Sales",
+      "referenced_table": "SalesTerritory",
+      "referenced_column": "TerritoryID"
+    },
+    {
+      "fk_name": "FK_SalesPersonQuotaHistory_SalesPerson_BusinessEntityID",
+      "parent_schema": "Sales",
+      "parent_table": "SalesPersonQuotaHistory",
+      "parent_column": "BusinessEntityID",
+      "referenced_schema": "Sales",
+      "referenced_table": "SalesPerson",
+      "referenced_column": "BusinessEntityID"
+    },
+    {
+      "fk_name": "FK_SalesTaxRate_StateProvince_StateProvinceID",
+      "parent_schema": "Sales",
+      "parent_table": "SalesTaxRate",
+      "parent_column": "StateProvinceID",
+      "referenced_schema": "Person",
+      "referenced_table": "StateProvince",
+      "referenced_column": "StateProvinceID"
+    },
+    {
+      "fk_name": "FK_SalesTerritory_CountryRegion_CountryRegionCode",
+      "parent_schema": "Sales",
+      "parent_table": "SalesTerritory",
+      "parent_column": "CountryRegionCode",
+      "referenced_schema": "Person",
+      "referenced_table": "CountryRegion",
+      "referenced_column": "CountryRegionCode"
+    },
+    {
+      "fk_name": "FK_SalesTerritoryHistory_SalesPerson_BusinessEntityID",
+      "parent_schema": "Sales",
+      "parent_table": "SalesTerritoryHistory",
+      "parent_column": "BusinessEntityID",
+      "referenced_schema": "Sales",
+      "referenced_table": "SalesPerson",
+      "referenced_column": "BusinessEntityID"
+    },
+    {
+      "fk_name": "FK_SalesTerritoryHistory_SalesTerritory_TerritoryID",
+      "parent_schema": "Sales",
+      "parent_table": "SalesTerritoryHistory",
+      "parent_column": "TerritoryID",
+      "referenced_schema": "Sales",
+      "referenced_table": "SalesTerritory",
+      "referenced_column": "TerritoryID"
+    },
+    {
+      "fk_name": "FK_ShoppingCartItem_Product_ProductID",
+      "parent_schema": "Sales",
+      "parent_table": "ShoppingCartItem",
+      "parent_column": "ProductID",
+      "referenced_schema": "Production",
+      "referenced_table": "Product",
+      "referenced_column": "ProductID"
+    },
+    {
+      "fk_name": "FK_SpecialOfferProduct_Product_ProductID",
+      "parent_schema": "Sales",
+      "parent_table": "SpecialOfferProduct",
+      "parent_column": "ProductID",
+      "referenced_schema": "Production",
+      "referenced_table": "Product",
+      "referenced_column": "ProductID"
+    },
+    {
+      "fk_name": "FK_SpecialOfferProduct_SpecialOffer_SpecialOfferID",
+      "parent_schema": "Sales",
+      "parent_table": "SpecialOfferProduct",
+      "parent_column": "SpecialOfferID",
+      "referenced_schema": "Sales",
+      "referenced_table": "SpecialOffer",
+      "referenced_column": "SpecialOfferID"
+    },
+    {
+      "fk_name": "FK_Store_BusinessEntity_BusinessEntityID",
+      "parent_schema": "Sales",
+      "parent_table": "Store",
+      "parent_column": "BusinessEntityID",
+      "referenced_schema": "Person",
+      "referenced_table": "BusinessEntity",
+      "referenced_column": "BusinessEntityID"
+    },
+    {
+      "fk_name": "FK_Store_SalesPerson_SalesPersonID",
+      "parent_schema": "Sales",
+      "parent_table": "Store",
+      "parent_column": "SalesPersonID",
+      "referenced_schema": "Sales",
+      "referenced_table": "SalesPerson",
+      "referenced_column": "BusinessEntityID"
+    }
+  ]
+}
