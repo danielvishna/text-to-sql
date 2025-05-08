@@ -34,6 +34,7 @@ services:
       - DB_NAME=AdventureWorks2022
       - API_HOST=0.0.0.0
       - API_PORT=8000
+    command: ["sh", "-c", "sleep 60 && python app.py"]
   frontend:
     build: ./frontend
     container_name: frontend
@@ -41,5 +42,4 @@ services:
       - "80:80"
     depends_on:
       - backend
-    environment:
-      - REACT_APP_API_URL=http://backend:5000/api
+    command: ["sh", "-c", "sleep 60 && nginx -g 'daemon off;'"]
